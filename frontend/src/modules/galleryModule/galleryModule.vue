@@ -1,6 +1,6 @@
 <template>
   <div>
-    <gallery-comp images="vm.images" class="gallery" />
+    <gallery-comp :images="vm.images" class="gallery" />
   </div>
 </template>
 
@@ -13,17 +13,20 @@ export default {
   components: { galleryComp },
   data () {
     return {
-      images: images
+      
     }
   },
   computed: {
     vm () {
       return this
+    },
+    images () {
+      return images
     }
   }
 }
 </script>
 
-<style>
+<style scoped lang="less">
 
 </style>
