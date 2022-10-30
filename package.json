@@ -1,0 +1,16 @@
+{
+  "name": "containerization",
+  "version": "1.0.0",
+  "description": "Containerization of web app running node backend",
+  "author": "Niklas Johansson <admin@ropr.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bandmask/template.git"
+  },
+  "scripts": {
+    "docker:build": "docker build -t bandmask/template .",
+    "docker:run": "docker run -p 80:49160 --name template -d bandmask/template",
+    "docker:pipe": "cd ./frontend && npm run build && cd ../ && npm run docker:build && npm run docker:run"
+  }
+}
