@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/module">lazyModule</router-link>
+      <router-link to="/gallery">gallery</router-link>
     </div>
     <router-view class="component-content" />
     <appFooter></appFooter>
@@ -20,6 +19,8 @@ export default {
 </script>
 
 <style lang="less">
+@import '@/assets/variables.less';
+
 body {
   margin: 0;
 
@@ -28,7 +29,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: @accent-color;
 
     #nav {
       position: absolute;
@@ -43,10 +44,14 @@ body {
 
       a {
         font-weight: bold;
-        color: #2c3e50;
+        color: @main-color;
 
         &.router-link-exact-active {
-          color: #42b983;
+          color: @accent-color;
+
+          &:hover {
+            color: @main-color;
+          }
         }
       }
     }
