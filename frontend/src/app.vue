@@ -5,7 +5,6 @@
     </div>
     <router-view class="component-content" />
     <appFooter></appFooter>
-    <div class="orientation">orientation: {{this.mq.current}}</div>
   </div>
 </template>
 
@@ -13,7 +12,6 @@
 import appFooter from '@/modules/footer/appFooter.vue'
 
 export default {
-  inject: ['mq'],
   components: { appFooter }
 }
 </script>
